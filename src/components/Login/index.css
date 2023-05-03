@@ -1,0 +1,78 @@
+.login-app-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 490px;
+  width: 456px;
+  background: #fefeff;
+  box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+  border-radius: 8px;
+
+  left: 57.22%;
+  right: 11.11%;
+  top: 26.07%;
+  bottom: 26.07%;
+}
+.logo {
+  width: 82px;
+  height: 30px;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  color: #262626;
+  padding-top: 24px;
+}
+.input {
+  height: 40px;
+  width: 360px;
+  left: 0px;
+  top: 24px;
+  border-radius: 2px;
+  background: #eeeeee;
+  margin-top: 8px;
+  border: none;
+}
+.login-btn {
+  height: 40px;
+  width: 360px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
+  margin-top: 40px;
+  background: #4094ef;
+  border: none;
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}

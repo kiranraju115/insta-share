@@ -1,0 +1,31 @@
+.user-logo {
+  height: 70px;
+  width: 70px;
+  left: 274px;
+  top: 112px;
+  border-radius: 35px;
+}
+.list-item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.username-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #262626;
+}
+.slick-next:before {
+  color: red;
+}
+.slick-prev:before {
+  color: green;
+}
