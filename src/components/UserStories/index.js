@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Slider from 'react-slick'
 import './index.css'
@@ -75,6 +76,12 @@ class UserStories extends Component {
     }
   }
 
+  renderLoadingView = () => (
+    <div className="loader-container-story" data-testid="loader">
+      <Loader type="Oval" color="#3b82f6" height="50" width="50" />
+    </div>
+  )
+
   renderStoryView = () => {
     const {userStories} = this.state
 
@@ -95,7 +102,33 @@ class UserStories extends Component {
     )
   }
 
-  renderAllStories = () => {
+  onClickRetry = () => {
+    this.getUserStories()
+  }
+
+  renderFailureView = () => (
+    <div className="failure-container">
+      <img
+        className="failure-img"
+        src="https://res.cloudinary.com/dahw90b2z/image/upload/v1649208425/Icon_1_qfbohw.png"
+        alt="failure view"
+      />
+      <h1 className="no-found-heading">
+        Something went wrong. Please try again
+      </h1>
+      <p>We cannot seem to find the page you are looking for</p>
+      <button
+        type="button"
+        className="home-page-btn"
+        onClick={this.onClickRetry}
+        data-testid="button"
+      >
+        Try again
+      </button>
+    </div>
+  )
+
+  renderAllStory = () => {
     const {apiStatus} = this.state
     switch (apiStatus) {
       case apiStatusConstants.success:
@@ -110,7 +143,11 @@ class UserStories extends Component {
   }
 
   render() {
-    return <div>{this.renderAllStories()}</div>
+    return (
+      <div className="main-container">
+        <div className="slick-container">{this.renderAllStory()}</div>
+      </div>
+    )
   }
 }
 

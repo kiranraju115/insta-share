@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Header from '../Header'
 import UserStories from '../UserStories'
+import InstaPost from '../InstaPost'
 
 import './index.css'
 
@@ -12,6 +13,7 @@ class Home extends Component {
       <>
         <Header />
         <UserStories />
+        <InstaPost />
       </>
     )
   }
